@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rickFragment">
+
+    <fragment
+        android:id="@+id/rickFragment"
+        android:name="com.example.hw_3_8.RickFragment"
+        android:label="fragment_rick"
+        tools:layout="@layout/fragment_rick" >
+        <action
+            android:id="@+id/action_rickFragment_to_mortyFragment"
+            app:destination="@id/mortyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mortyFragment"
+        android:name="com.example.hw_3_8.MortyFragment"
+        android:label="fragment_rick"
+        tools:layout="@layout/fragment_morty" >
+        <action
+            android:id="@+id/action_mortyFragment_to_einsteinFragment"
+            app:destination="@id/einsteinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/einsteinFragment"
+        android:name="com.example.hw_3_8.EinsteinFragment"
+        android:label="fragment_rick"
+        tools:layout="@layout/fragment_einstein" >
+        <action
+            android:id="@+id/action_einsteinFragment_to_jerryFragment"
+            app:destination="@id/jerryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jerryFragment"
+        android:name="com.example.hw_3_8.JerryFragment"
+        android:label="fragment_rick"
+        tools:layout="@layout/fragment_jerry" >
+        <action
+            android:id="@+id/action_jerryFragment_to_rickFragment"
+            app:destination="@id/rickFragment" />
+    </fragment>
+</navigation>
